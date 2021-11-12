@@ -30,7 +30,7 @@
 14. Make the sort block to popup on clicking the search block button and to close on clicking one of the given options 1h
 15. Make the output block to look correspondingly to the chosen sorting option, that is, change the output block and the user block respectively 1h
 16. Allow clicking a user trigger opening the detailed user block and place the upper block, the info block and the contacts block with its phone and datebirth blocks inside 2h
-17. Lay out the upper block with the button to close the detailed user block 30m
+17. Lay out the upper block and implement the system back button and the block's inner block, the button, to close the detailed user block 2h
 18. Lay out the info block 30m
-19. Lay out the phone number block 30m
+19. Lay out the phone number block and implement its functionality 1h
 21. Lay out the datebirth block 1h
