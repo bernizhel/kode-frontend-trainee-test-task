@@ -1,0 +1,78 @@
+@use '@styles/colors' as colors;
+@use '@styles/animations' as animations;
+@use 'sass:math';
+
+.button {
+    transition: animations.$BASIC_TRANSITION;
+    &_active {
+        filter: colors.$FOCUS_FILTER;
+    }
+}
+
+$CONTAINER_PADDING: 10px;
+$BUTTON_HEIGHT: 20px;
+$CLOSE_HEIGHT: 24px;
+.dialogue {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: colors.$BG_TRANSPARENT;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: $CONTAINER_PADDING;
+    &__container {
+        position: relative;
+        width: 100%;
+        max-width: 370px;
+        min-height: 200px;
+        background-color: colors.$BG_PRIMARY;
+        border-radius: 20px;
+        padding: 24px;
+    }
+    &__heading {
+        font-weight: 600;
+        font-size: 1.25rem;
+        color: colors.$TEXT_PRIMARY;
+        text-align: center;
+    }
+    &__radio {
+        display: flex;
+        flex-direction: column;
+    }
+    &__button {
+        display: none;
+    }
+    &__label {
+        display: block;
+        margin-top: 40px;
+        cursor: pointer;
+        font-weight: 500;
+        &::before {
+            transition: animations.$BASIC_TRANSITION;
+            box-sizing: border-box;
+            content: '';
+            margin-right: 14px;
+            display: inline-block;
+            vertical-align: middle;
+            width: $BUTTON_HEIGHT;
+            height: $BUTTON_HEIGHT;
+            border-radius: 50%;
+            border: 2px solid colors.$FOCUS;
+        }
+        &_active {
+            &::before {
+                border-width: 6px;
+            }
+        }
+    }
+    &__close {
+        width: $CLOSE_HEIGHT;
+        height: $CLOSE_HEIGHT;
+        position: absolute;
+        right: $CONTAINER_PADDING + math.div($CLOSE_HEIGHT, 2);
+        top: $CONTAINER_PADDING + math.div($CLOSE_HEIGHT, 2);
+    }
+}

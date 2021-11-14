@@ -1,6 +1,5 @@
 @use '@styles/colors' as colors;
 @use '@styles/animations' as animations;
-@use 'sass:color';
 
 .InputSearch {
     display: flex;
@@ -32,12 +31,5 @@
     transition: animations.$BASIC_TRANSITION;
     &_active {
         filter: colors.$TEXT_PRIMARY_FILTER;
-    }
-}
-
-.sort {
-    transition: animations.$BASIC_TRANSITION;
-    &_active {
-        filter: colors.$FOCUS_FILTER;
     }
 }

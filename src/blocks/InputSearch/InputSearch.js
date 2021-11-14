@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import styles from './InputSearch.module.scss';
 import loop from './loop.svg';
-import sort from './sort.svg';
+import InputSort from '@blocks/InputSort/InputSort';
 
 function InputSearch() {
     const [isFocused, setIsFocused] = useState(false);
@@ -22,14 +22,7 @@ function InputSearch() {
                 onFocus={() => setIsFocused(true)}
                 onBlur={() => setIsFocused(false)}
             />
-            <input
-                className={`${styles.sort} ${
-                    isFocused ? styles.sort_active : ''
-                }`}
-                type={'image'}
-                src={sort}
-                alt={'Sort!'}
-            />
+            <InputSort />
         </div>
     );
 }

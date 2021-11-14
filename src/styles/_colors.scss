@@ -7,6 +7,6 @@ $TEXT_SECONDARY: #55555c;
 $TEXT_TETRIARY: #97979b;
 $FOCUS: #6534ff;
 
+// used by 'filter' property
 $TEXT_PRIMARY_FILTER: invert(1);
-$FOCUS_FILTER: invert(27%) sepia(92%) saturate(5568%) hue-rotate(251deg)
-    brightness(101%) contrast(106%);
+$FOCUS_FILTER: invert(1) sepia(1) saturate(50) hue-rotate(270deg);
