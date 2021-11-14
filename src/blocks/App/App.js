@@ -4,7 +4,7 @@ import OutputBlock from '@blocks/OutputBlock/OutputBlock';
 
 function App() {
     return (
-        <div className={styles.container}>
+        <div className={styles.App}>
             <InputBlock />
             <OutputBlock />
         </div>

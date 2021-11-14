@@ -8,6 +8,10 @@ module.exports = {
                 __dirname,
                 path.join('src', 'assets', 'fonts'),
             ),
+            '@images': path.resolve(
+                __dirname,
+                path.join('src', 'assets', 'images'),
+            ),
             '@styles': path.resolve(__dirname, path.join('src', 'styles')),
         },
     },

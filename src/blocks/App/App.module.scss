@@ -1,5 +1,5 @@
-@use '@styles/colors' as colors;
-
 .App {
-    background-color: colors.$BG_PRIMARY;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }

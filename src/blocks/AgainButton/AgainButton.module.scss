@@ -1,0 +1,7 @@
+@use '@styles/colors' as colors;
+
+.AgainButton {
+    font-weight: 600;
+    color: colors.$FOCUS;
+    background-color: colors.$BG_PRIMARY;
+}
