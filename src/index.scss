@@ -1,0 +1,47 @@
+$SOURCE_PATH: './assets/fonts/';
+$REGULAR_NAME: 'Inter-Regular/Inter-Regular';
+$MEDIUM_NAME: 'Inter-Medium/Inter-Medium';
+$SEMIBOLD_NAME: 'Inter-SemiBold/Inter-SemiBold';
+$BOLD_NAME: 'Inter-Bold/Inter-Bold';
+
+@font-face {
+    font-family: 'Inter';
+    font-weight: 400;
+    src: url($SOURCE_PATH + $REGULAR_NAME + '.ttf') format('truetype'),
+        url($SOURCE_PATH + $REGULAR_NAME + '.otf') format('opentype'),
+        url($SOURCE_PATH + $REGULAR_NAME + '.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Inter';
+    font-weight: 500;
+    src: url($SOURCE_PATH + $MEDIUM_NAME + '.ttf') format('truetype'),
+        url($SOURCE_PATH + $MEDIUM_NAME + '.otf') format('opentype'),
+        url($SOURCE_PATH + $MEDIUM_NAME + '.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Inter';
+    font-weight: 600;
+    src: url($SOURCE_PATH + $SEMIBOLD_NAME + '.ttf') format('truetype'),
+        url($SOURCE_PATH + $SEMIBOLD_NAME + '.otf') format('opentype'),
+        url($SOURCE_PATH + $SEMIBOLD_NAME + '.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Inter';
+    font-weight: 700;
+    src: url($SOURCE_PATH + $BOLD_NAME + '.ttf') format('truetype'),
+        url($SOURCE_PATH + $BOLD_NAME + '.otf') format('opentype'),
+        url($SOURCE_PATH + $BOLD_NAME + '.woff') format('woff');
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Inter', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
