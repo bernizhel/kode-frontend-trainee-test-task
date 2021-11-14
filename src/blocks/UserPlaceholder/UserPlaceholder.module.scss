@@ -1,0 +1,41 @@
+$GRADIENT: linear-gradient(90deg, #f3f3f6 0%, #fafafa 100%);
+
+.UserPlaceholder {
+    width: 100%;
+    display: flex;
+    gap: 16px;
+}
+
+.avatar,
+.name,
+.position {
+    background-image: $GRADIENT;
+}
+
+$AVATAR_HEIGHT: 72px;
+.avatar {
+    width: $AVATAR_HEIGHT;
+    height: $AVATAR_HEIGHT;
+    border-radius: $AVATAR_HEIGHT / 2;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 6px;
+}
+
+$NAME_HEIGHT: 16px;
+.name {
+    width: 144px;
+    height: $NAME_HEIGHT;
+    border-radius: $NAME_HEIGHT / 2;
+}
+
+$POSITION_HEIGHT: 12px;
+.position {
+    width: 80px;
+    height: $POSITION_HEIGHT;
+    border-radius: $POSITION_HEIGHT / 2;
+}

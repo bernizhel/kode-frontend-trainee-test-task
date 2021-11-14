@@ -1,11 +1,13 @@
 import styles from './App.module.scss';
 import InputBlock from '@blocks/InputBlock/InputBlock';
+import OutputBlock from '@blocks/OutputBlock/OutputBlock';
 
 function App() {
     return (
-        <main className={styles.container}>
+        <div className={styles.container}>
             <InputBlock />
-        </main>
+            <OutputBlock />
+        </div>
     );
 }
 

@@ -1,0 +1,10 @@
+@use '@styles/vars' as vars;
+
+.Output {
+    padding: vars.$PADDING;
+    padding-top: 22px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 12px;
+}
