@@ -1,0 +1,12 @@
+$BG_PRIMARY: #ffffff;
+$BG_TRANSPARENT: rgba(5, 5, 16, 0.16);
+$BG_SECONDARY: #f7f7f8;
+$CONTENT: #c3c3c6;
+$TEXT_PRIMARY: #050510;
+$TEXT_SECONDARY: #55555c;
+$TEXT_TETRIARY: #97979b;
+$FOCUS: #6534ff;
+
+$TEXT_PRIMARY_FILTER: invert(1);
+$FOCUS_FILTER: invert(27%) sepia(92%) saturate(5568%) hue-rotate(251deg)
+    brightness(101%) contrast(106%);

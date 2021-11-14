@@ -8,7 +8,7 @@ module.exports = {
                 __dirname,
                 path.join('src', 'assets', 'fonts'),
             ),
-            '@src': path.resolve(__dirname, 'src'),
+            '@styles': path.resolve(__dirname, path.join('src', 'styles')),
         },
     },
 };

@@ -1,0 +1,22 @@
+@use '@styles/colors' as colors;
+@use '@styles/animations' as animations;
+
+.InputTabs {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tab {
+    transition: animations.$BASIC_TRANSITION;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    background-color: colors.$BG_PRIMARY;
+    color: colors.$TEXT_TETRIARY;
+    font-weight: 500;
+    &_active {
+        box-shadow: 0 -2px colors.$FOCUS inset;
+        font-weight: 600;
+        color: colors.$TEXT_PRIMARY;
+    }
+}

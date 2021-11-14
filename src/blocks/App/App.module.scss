@@ -1,3 +1,5 @@
-.container {
-    text-align: center;
+@use '@styles/colors' as colors;
+
+.App {
+    background-color: colors.$BG_PRIMARY;
 }
