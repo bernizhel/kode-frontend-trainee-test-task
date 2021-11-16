@@ -21,8 +21,14 @@ function InputSort() {
                 onClick={() => setIsSelecting(true)}
             />
             {isSelecting && (
-                <aside className={styles.dialogue}>
-                    <div className={styles.dialogue__container}>
+                <aside
+                    className={styles.dialogue}
+                    onClick={() => setIsSelecting(false)}
+                >
+                    <div
+                        className={styles.dialogue__container}
+                        onClick={(event) => event.stopPropagation()}
+                    >
                         <h2 className={styles.dialogue__heading}>Сортировка</h2>
                         <input
                             className={styles.dialogue__button}
