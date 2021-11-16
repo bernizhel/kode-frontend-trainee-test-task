@@ -43,7 +43,10 @@ function InputSort() {
                                     : ''
                             }`}
                             htmlFor={ALPHABET}
-                            onClick={() => setActiveName(ALPHABET)}
+                            onClick={() => {
+                                setActiveName(ALPHABET);
+                                setIsSelecting(false);
+                            }}
                         >
                             По алфавиту
                         </label>
@@ -60,7 +63,10 @@ function InputSort() {
                                     : ''
                             }`}
                             htmlFor={BIRTHDATE}
-                            onClick={() => setActiveName(BIRTHDATE)}
+                            onClick={() => {
+                                setActiveName(BIRTHDATE);
+                                setIsSelecting(false);
+                            }}
                         >
                             По дню рождения
                         </label>
