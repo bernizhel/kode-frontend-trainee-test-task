@@ -5,30 +5,47 @@ import flyingSaucer from '@images/flying-saucer.png';
 import magnifyingGlass from '@images/magnifying-glass.png';
 import AgainButton from '@blocks/AgainButton/AgainButton';
 import UserBlock from '../UserBlock/UserBlock';
+import { usersAsync, selectUsers, selectStatus } from '@app/appSlice';
+import { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { STATUS } from '@app/appVars';
 
 function OutputBlock() {
-    function getContent() {
+    const dispatch = useDispatch();
+    const users = useSelector(selectUsers);
+    const status = useSelector(selectStatus);
+    useEffect(() => {
+        dispatch(usersAsync());
+    }, [dispatch]);
+    function getPlaceholders() {
         const content = [];
-        for (let i = 0; i < 5; i++) {
+        const count = 10;
+        for (let i = 0; i < count; i++) {
             content.push(<UserPlaceholder key={i} />);
-            content.push(<UserBlock key={i} />);
         }
         return content;
     }
     return (
         <main className={styles.OutputBlock}>
-            {getContent()}
-            <OutputInfo
-                image={flyingSaucer}
-                primary={'Какой-то сверхразум все сломал'}
-                secondary={'Постараемся быстро починить'}
-                action={<AgainButton />}
-            />
-            <OutputInfo
-                image={magnifyingGlass}
-                primary={'Мы никого не нашли'}
-                secondary={'Попробуй скорректировать запрос'}
-            />
+            {status === STATUS.LOADING && getPlaceholders()}
+            {status === STATUS.IDLE &&
+                (users.length !== 0 ? (
+                    users.map((user) => <UserBlock key={user.id} />)
+                ) : (
+                    <OutputInfo
+                        image={magnifyingGlass}
+                        primary={'Мы никого не нашли'}
+                        secondary={'Попробуй скорректировать запрос'}
+                    />
+                ))}
+            {status === STATUS.ERROR && (
+                <OutputInfo
+                    image={flyingSaucer}
+                    primary={'Какой-то сверхразум все сломал'}
+                    secondary={'Постараемся быстро починить'}
+                    action={<AgainButton />}
+                />
+            )}
         </main>
     );
 }

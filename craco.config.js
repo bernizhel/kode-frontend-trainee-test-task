@@ -1,18 +1,17 @@
 const path = require('path');
 
+function buildPathFromSource(...dirs) {
+    return path.resolve(__dirname, path.join('src', ...dirs));
+}
+
 module.exports = {
     webpack: {
         alias: {
-            '@blocks': path.resolve(__dirname, path.join('src', 'blocks')),
-            '@fonts': path.resolve(
-                __dirname,
-                path.join('src', 'assets', 'fonts'),
-            ),
-            '@images': path.resolve(
-                __dirname,
-                path.join('src', 'assets', 'images'),
-            ),
-            '@styles': path.resolve(__dirname, path.join('src', 'styles')),
+            '@blocks': buildPathFromSource('blocks'),
+            '@app': buildPathFromSource('app'),
+            '@fonts': buildPathFromSource('assets', 'fonts'),
+            '@images': buildPathFromSource('assets', 'images'),
+            '@styles': buildPathFromSource('styles'),
         },
     },
 };

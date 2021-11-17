@@ -12,7 +12,7 @@ function InputSort() {
     return (
         <>
             <input
-                className={`${styles.button} ${
+                className={`${
                     activeName === BIRTHDATE ? styles.button_active : ''
                 }`}
                 type={'image'}

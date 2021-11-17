@@ -3,7 +3,6 @@
 @use 'sass:math';
 
 .button {
-    transition: animations.$BASIC_TRANSITION;
     &_active {
         filter: colors.$FOCUS_FILTER;
     }
