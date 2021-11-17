@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/kode-frontend-trainee-test-task/static/css/main.f8348336.chunk.css",
-    "main.js": "/kode-frontend-trainee-test-task/static/js/main.c9acb33f.chunk.js",
-    "main.js.map": "/kode-frontend-trainee-test-task/static/js/main.c9acb33f.chunk.js.map",
+    "main.css": "/kode-frontend-trainee-test-task/static/css/main.d4bf8f33.chunk.css",
+    "main.js": "/kode-frontend-trainee-test-task/static/js/main.622d58c9.chunk.js",
+    "main.js.map": "/kode-frontend-trainee-test-task/static/js/main.622d58c9.chunk.js.map",
     "runtime-main.js": "/kode-frontend-trainee-test-task/static/js/runtime-main.45d26e04.js",
     "runtime-main.js.map": "/kode-frontend-trainee-test-task/static/js/runtime-main.45d26e04.js.map",
-    "static/js/2.8c6ba22a.chunk.js": "/kode-frontend-trainee-test-task/static/js/2.8c6ba22a.chunk.js",
-    "static/js/2.8c6ba22a.chunk.js.map": "/kode-frontend-trainee-test-task/static/js/2.8c6ba22a.chunk.js.map",
+    "static/js/2.8a93f04c.chunk.js": "/kode-frontend-trainee-test-task/static/js/2.8a93f04c.chunk.js",
+    "static/js/2.8a93f04c.chunk.js.map": "/kode-frontend-trainee-test-task/static/js/2.8a93f04c.chunk.js.map",
     "index.html": "/kode-frontend-trainee-test-task/index.html",
-    "static/css/main.f8348336.chunk.css.map": "/kode-frontend-trainee-test-task/static/css/main.f8348336.chunk.css.map",
-    "static/js/2.8c6ba22a.chunk.js.LICENSE.txt": "/kode-frontend-trainee-test-task/static/js/2.8c6ba22a.chunk.js.LICENSE.txt",
+    "static/css/main.d4bf8f33.chunk.css.map": "/kode-frontend-trainee-test-task/static/css/main.d4bf8f33.chunk.css.map",
+    "static/js/2.8a93f04c.chunk.js.LICENSE.txt": "/kode-frontend-trainee-test-task/static/js/2.8a93f04c.chunk.js.LICENSE.txt",
     "static/media/index.scss": "/kode-frontend-trainee-test-task/static/media/Inter-SemiBold.ff7b3ba2.woff",
     "static/media/cross.abc0b3d8.svg": "/kode-frontend-trainee-test-task/static/media/cross.abc0b3d8.svg",
     "static/media/loop.f3a7d698.svg": "/kode-frontend-trainee-test-task/static/media/loop.f3a7d698.svg",
@@ -17,8 +17,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.45d26e04.js",
-    "static/js/2.8c6ba22a.chunk.js",
-    "static/css/main.f8348336.chunk.css",
-    "static/js/main.c9acb33f.chunk.js"
+    "static/js/2.8a93f04c.chunk.js",
+    "static/css/main.d4bf8f33.chunk.css",
+    "static/js/main.622d58c9.chunk.js"
   ]
 }
