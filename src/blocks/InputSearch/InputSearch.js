@@ -7,11 +7,10 @@ function InputSearch() {
     const [isFocused, setIsFocused] = useState(false);
     return (
         <div className={styles.InputSearch}>
-            <input
+            <img
                 className={`${styles.loop} ${
                     isFocused ? styles.loop_active : ''
                 }`}
-                type={'image'}
                 src={loop}
                 alt={'Search!'}
             />

@@ -1,29 +1,30 @@
 import styles from './OutputBlock.module.scss';
 import UserPlaceholder from '@blocks/UserPlaceholder/UserPlaceholder';
-import OutputInfoMonitor from '@blocks/OutputInfoMonitor/OutputInfoMonitor';
+import OutputInfo from '@blocks/OutputInfo/OutputInfo';
 import flyingSaucer from '@images/flying-saucer.png';
 import magnifyingGlass from '@images/magnifying-glass.png';
 import AgainButton from '@blocks/AgainButton/AgainButton';
+import UserBlock from '../UserBlock/UserBlock';
 
 function OutputBlock() {
-    function getBlankItems() {
-        const blankContents = [];
-        for (let i = 0; i < 10; i++) {
-            blankContents.push(<UserPlaceholder key={i} />);
+    function getContent() {
+        const content = [];
+        for (let i = 0; i < 5; i++) {
+            content.push(<UserPlaceholder key={i} />);
+            content.push(<UserBlock key={i} />);
         }
-        return blankContents;
+        return content;
     }
-
     return (
         <main className={styles.OutputBlock}>
-            {getBlankItems()}
-            <OutputInfoMonitor
+            {getContent()}
+            <OutputInfo
                 image={flyingSaucer}
                 primary={'Какой-то сверхразум все сломал'}
                 secondary={'Постараемся быстро починить'}
                 action={<AgainButton />}
             />
-            <OutputInfoMonitor
+            <OutputInfo
                 image={magnifyingGlass}
                 primary={'Мы никого не нашли'}
                 secondary={'Попробуй скорректировать запрос'}
