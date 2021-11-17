@@ -30,7 +30,19 @@ function OutputBlock() {
             {status === STATUS.LOADING && getPlaceholders()}
             {status === STATUS.IDLE &&
                 (users.length !== 0 ? (
-                    users.map((user) => <UserBlock key={user.id} />)
+                    users.map((user) => (
+                        <UserBlock
+                            key={user.id}
+                            avatarUrl={user.avatarUrl}
+                            firstName={user.firstName}
+                            lastName={user.lastName}
+                            userTag={user.userTag}
+                            position={user.position}
+                            department={user.department}
+                            birthday={user.birthday}
+                            phone={user.phone}
+                        />
+                    ))
                 ) : (
                     <OutputInfo
                         image={magnifyingGlass}

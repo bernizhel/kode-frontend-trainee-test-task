@@ -8,12 +8,12 @@ function InputSort() {
     const [activeName, setActiveName] = useState('alphabet');
     const FIELDSET_NAME = 'sort';
     const ALPHABET = 'alphabet';
-    const BIRTHDATE = 'birthdate';
+    const BIRTHDAY = 'birthday';
     return (
         <>
             <input
                 className={`${
-                    activeName === BIRTHDATE ? styles.button_active : ''
+                    activeName === BIRTHDAY ? styles.button_active : ''
                 }`}
                 type={'image'}
                 src={sort}
@@ -53,18 +53,18 @@ function InputSort() {
                         <input
                             className={styles.dialogue__button}
                             type={'radio'}
-                            id={BIRTHDATE}
+                            id={BIRTHDAY}
                             name={FIELDSET_NAME}
                         />
                         <label
                             className={`${styles.dialogue__label} ${
-                                activeName === BIRTHDATE
+                                activeName === BIRTHDAY
                                     ? styles.dialogue__label_active
                                     : ''
                             }`}
-                            htmlFor={BIRTHDATE}
+                            htmlFor={BIRTHDAY}
                             onClick={() => {
-                                setActiveName(BIRTHDATE);
+                                setActiveName(BIRTHDAY);
                                 setIsSelecting(false);
                             }}
                         >

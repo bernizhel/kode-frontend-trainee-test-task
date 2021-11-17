@@ -1,5 +1,45 @@
 @use '@styles/colors' as colors;
+@use 'sass:math';
 
 .UserBlock {
-    color: colors.$FOCUS;
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 16px;
+}
+
+$AVATAR_HEIGHT: 72px;
+.avatar {
+    width: $AVATAR_HEIGHT;
+    height: $AVATAR_HEIGHT;
+    border-radius: math.div($AVATAR_HEIGHT, 2);
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 3px;
+}
+
+.names {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+}
+
+.name {
+    font-weight: 500;
+    color: colors.$TEXT_PRIMARY;
+}
+
+.tag {
+    font-weight: 500;
+    color: colors.$TEXT_TETRIARY;
+    font-size: 0.875rem;
+    text-transform: lowercase;
+}
+
+.position {
+    color: colors.$TEXT_SECONDARY;
+    font-size: 0.8125rem;
 }

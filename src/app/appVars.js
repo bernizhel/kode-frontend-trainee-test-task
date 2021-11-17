@@ -16,4 +16,4 @@ export const TAB = {
     ANALYTICS: 'analytics',
 };
 
-export const SORT = { ALPHABET: 'alphabet', BIRTHDATE: 'birthdate' };
+export const SORT = { ALPHABET: 'alphabet', BIRTHDAY: 'birthday' };
