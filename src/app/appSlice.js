@@ -6,7 +6,7 @@ const initialState = {
     status: STATUS.LOADING,
     users: [],
     search: '',
-    tab: TAB.ALL,
+    tab: TAB.ALL.code,
     sort: SORT.ALPHABET,
 };
 

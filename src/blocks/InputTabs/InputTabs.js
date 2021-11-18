@@ -1,34 +1,22 @@
-import { useState } from 'react';
 import styles from './InputTabs.module.scss';
+import { useDispatch, useSelector } from 'react-redux';
+import { selectTab, setTab } from '@app/appSlice';
+import { TAB } from '@app/appVars';
 
 function InputTabs() {
-    const [activeIndex, setActiveIndex] = useState(0);
-    const data = [
-        { text: 'All' },
-        { text: 'Designers' },
-        { text: 'Android' },
-        { text: 'iOS' },
-        { text: 'Managment' },
-        { text: 'QA' },
-        { text: 'HR' },
-        { text: 'PR' },
-        { text: 'Back Office' },
-        { text: 'Frontend' },
-        { text: 'Backend' },
-        { text: 'Support' },
-        { text: 'Analytics' },
-    ];
+    const dispatch = useDispatch();
+    const activeTab = useSelector(selectTab);
     return (
         <div className={styles.InputTabs}>
-            {data.map((item, index) => (
+            {Object.values(TAB).map((tab, index) => (
                 <button
                     className={`${styles.tab} ${
-                        activeIndex === index ? styles.tab_active : ''
+                        activeTab === tab.code ? styles.tab_active : ''
                     }`}
                     key={index}
-                    onClick={() => setActiveIndex(index)}
+                    onClick={() => dispatch(setTab(tab.code))}
                 >
-                    {item.text}
+                    {tab.name}
                 </button>
             ))}
         </div>
