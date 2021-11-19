@@ -1,5 +1,5 @@
 import { useDispatch } from 'react-redux';
-import { usersAsync } from '../../app/appSlice';
+import { asyncUsers } from '../../app/appSlice';
 import styles from './AgainButton.module.scss';
 
 function AgainButton() {
@@ -8,7 +8,7 @@ function AgainButton() {
         <button
             className={styles.AgainButton}
             onClick={() => {
-                dispatch(usersAsync());
+                dispatch(asyncUsers());
             }}
         >
             Попробовать снова

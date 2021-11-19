@@ -2,18 +2,20 @@ import { useState } from 'react';
 import styles from './InputSort.module.scss';
 import sort from './sort.svg';
 import cross from './cross.svg';
+import { selectSort, setSort } from '@app/appSlice';
+import { SORT } from '@app/appVars';
+import { useDispatch, useSelector } from 'react-redux';
 
 function InputSort() {
+    const dispatch = useDispatch();
     const [isSelecting, setIsSelecting] = useState(false);
-    const [activeName, setActiveName] = useState('alphabet');
     const FIELDSET_NAME = 'sort';
-    const ALPHABET = 'alphabet';
-    const BIRTHDAY = 'birthday';
+    const sortMethod = useSelector(selectSort);
     return (
         <>
             <input
                 className={`${
-                    activeName === BIRTHDAY ? styles.button_active : ''
+                    sortMethod === SORT.BIRTHDAY ? styles.button_active : ''
                 }`}
                 type={'image'}
                 src={sort}
@@ -33,18 +35,18 @@ function InputSort() {
                         <input
                             className={styles.dialogue__button}
                             type={'radio'}
-                            id={ALPHABET}
+                            id={SORT.ALPHABET}
                             name={FIELDSET_NAME}
                         />
                         <label
                             className={`${styles.dialogue__label} ${
-                                activeName === ALPHABET
+                                sortMethod === SORT.ALPHABET
                                     ? styles.dialogue__label_active
                                     : ''
                             }`}
-                            htmlFor={ALPHABET}
+                            htmlFor={SORT.ALPHABET}
                             onClick={() => {
-                                setActiveName(ALPHABET);
+                                dispatch(setSort(SORT.ALPHABET));
                                 setIsSelecting(false);
                             }}
                         >
@@ -53,18 +55,18 @@ function InputSort() {
                         <input
                             className={styles.dialogue__button}
                             type={'radio'}
-                            id={BIRTHDAY}
+                            id={SORT.BIRTHDAY}
                             name={FIELDSET_NAME}
                         />
                         <label
                             className={`${styles.dialogue__label} ${
-                                activeName === BIRTHDAY
+                                sortMethod === SORT.BIRTHDAY
                                     ? styles.dialogue__label_active
                                     : ''
                             }`}
-                            htmlFor={BIRTHDAY}
+                            htmlFor={SORT.BIRTHDAY}
                             onClick={() => {
-                                setActiveName(BIRTHDAY);
+                                dispatch(setSort(SORT.BIRTHDAY));
                                 setIsSelecting(false);
                             }}
                         >

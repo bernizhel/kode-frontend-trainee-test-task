@@ -6,16 +6,16 @@ import magnifyingGlass from '@images/magnifying-glass.png';
 import AgainButton from '@blocks/AgainButton/AgainButton';
 import UserBlock from '../UserBlock/UserBlock';
 import {
-    usersAsync,
+    asyncUsers,
     selectUsers,
     selectStatus,
     selectSearch,
     selectTab,
     selectSort,
 } from '@app/appSlice';
-import { useEffect } from 'react';
+import { Fragment, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { STATUS } from '@app/appVars';
+import { STATUS, SORT } from '@app/appVars';
 
 function OutputBlock() {
     const dispatch = useDispatch();
@@ -26,16 +26,8 @@ function OutputBlock() {
         .split(' ');
     const tab = useSelector(selectTab);
     useEffect(() => {
-        dispatch(usersAsync());
+        dispatch(asyncUsers());
     }, [dispatch]);
-    function getPlaceholders() {
-        const content = [];
-        const count = 10;
-        for (let i = 0; i < count; i++) {
-            content.push(<UserPlaceholder key={i} />);
-        }
-        return content;
-    }
     function filterCallback(user) {
         return (
             user.department.includes(tab) &&
@@ -48,24 +40,91 @@ function OutputBlock() {
             )
         );
     }
-    const users = useSelector(selectUsers).filter(filterCallback);
+    const sortMethod = useSelector(selectSort);
+    let sortByBirthdayId;
+    function sortUsers() {
+        function sortCallback(nextUser, previousUser) {
+            if (sortMethod === SORT.ALPHABET) {
+                return [nextUser.firstName, nextUser.lastname]
+                    .join(' ')
+                    .localeCompare(
+                        [previousUser.firstName, previousUser.lastName].join(
+                            ' ',
+                        ),
+                    );
+            } else if (sortMethod === SORT.BIRTHDAY) {
+                const nextUserBirthday = new Date(nextUser.birthday);
+                const previousUserBirthday = new Date(previousUser.birthday);
+                return nextUserBirthday.getMonth() ===
+                    previousUserBirthday.getMonth()
+                    ? nextUserBirthday.getDate() -
+                          previousUserBirthday.getDate()
+                    : nextUserBirthday.getMonth() -
+                          previousUserBirthday.getMonth();
+            }
+        }
+        users.sort(sortCallback);
+        if (sortMethod === SORT.BIRTHDAY) {
+            const currentDate = new Date();
+            for (let i = 0; i < users.length; i++) {
+                const userDate = new Date(users[i].birthday);
+                if (
+                    userDate.getMonth() === currentDate.getMonth()
+                        ? userDate.getDate() >= currentDate.getDate()
+                        : userDate.getMonth() > currentDate.getMonth()
+                ) {
+                    const usersThisYear = users.slice(i, users.length);
+                    const usersNextYear = users.slice(0, i);
+                    sortByBirthdayId = usersNextYear[0]?.id;
+                    users = usersThisYear.concat(usersNextYear);
+                    break;
+                } else {
+                    sortByBirthdayId = users[0].id;
+                }
+            }
+        }
+    }
+    let users = useSelector(selectUsers);
+    users = users.filter(filterCallback);
+    sortUsers();
+    function getPlaceholders() {
+        const content = [];
+        const count = 10;
+        for (let i = 0; i < count; i++) {
+            content.push(<UserPlaceholder key={i} />);
+        }
+        return content;
+    }
     return (
         <main className={styles.OutputBlock}>
             {status === STATUS.LOADING && getPlaceholders()}
             {status === STATUS.IDLE &&
                 (users.length !== 0 ? (
                     users.map((user) => (
-                        <UserBlock
-                            key={user.id}
-                            avatarUrl={user.avatarUrl}
-                            firstName={user.firstName}
-                            lastName={user.lastName}
-                            userTag={user.userTag}
-                            position={user.position}
-                            department={user.department}
-                            birthday={user.birthday}
-                            phone={user.phone}
-                        />
+                        <Fragment key={user.id}>
+                            {sortMethod === SORT.BIRTHDAY &&
+                                sortByBirthdayId === user.id && (
+                                    <div className={styles.divider}>
+                                        <div className={styles.divider__left} />
+                                        <div className={styles.divider__year}>
+                                            {new Date().getFullYear() + 1}
+                                        </div>
+                                        <div
+                                            className={styles.divider__right}
+                                        />
+                                    </div>
+                                )}
+                            <UserBlock
+                                avatarUrl={user.avatarUrl}
+                                firstName={user.firstName}
+                                lastName={user.lastName}
+                                userTag={user.userTag}
+                                position={user.position}
+                                department={user.department}
+                                birthday={user.birthday}
+                                phone={user.phone}
+                            />
+                        </Fragment>
                     ))
                 ) : (
                     <OutputInfo

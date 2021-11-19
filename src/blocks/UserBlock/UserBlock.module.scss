@@ -15,6 +15,13 @@ $AVATAR_HEIGHT: 72px;
 }
 
 .text {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -30,6 +37,7 @@ $AVATAR_HEIGHT: 72px;
 .name {
     font-weight: 500;
     color: colors.$TEXT_PRIMARY;
+    white-space: nowrap;
 }
 
 .tag {
@@ -42,4 +50,10 @@ $AVATAR_HEIGHT: 72px;
 .position {
     color: colors.$TEXT_SECONDARY;
     font-size: 0.8125rem;
+}
+
+.birthday {
+    color: colors.$TEXT_SECONDARY;
+    font-size: 0.9375;
+    text-align: right;
 }

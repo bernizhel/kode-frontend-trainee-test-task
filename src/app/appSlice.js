@@ -10,7 +10,7 @@ const initialState = {
     sort: SORT.ALPHABET,
 };
 
-export const usersAsync = createAsyncThunk('app/fetchUsers', async () => {
+export const asyncUsers = createAsyncThunk('app/fetchUsers', async () => {
     const data = await fetchUsers().then((response) => response.data);
     return data.items;
 });
@@ -31,14 +31,14 @@ export const appSlice = createSlice({
     },
     extraReducers: (builder) => {
         builder
-            .addCase(usersAsync.pending, (state) => {
+            .addCase(asyncUsers.pending, (state) => {
                 state.status = STATUS.LOADING;
             })
-            .addCase(usersAsync.fulfilled, (state, action) => {
+            .addCase(asyncUsers.fulfilled, (state, action) => {
                 state.status = STATUS.IDLE;
                 state.users = action.payload;
             })
-            .addCase(usersAsync.rejected, (state) => {
+            .addCase(asyncUsers.rejected, (state) => {
                 state.status = STATUS.ERROR;
             });
     },
