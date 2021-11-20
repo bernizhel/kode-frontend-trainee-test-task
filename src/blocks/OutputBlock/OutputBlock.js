@@ -120,7 +120,6 @@ function OutputBlock() {
                                 lastName={user.lastName}
                                 userTag={user.userTag}
                                 position={user.position}
-                                department={user.department}
                                 birthday={user.birthday}
                                 phone={user.phone}
                             />

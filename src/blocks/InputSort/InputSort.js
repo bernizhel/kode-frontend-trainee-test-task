@@ -12,7 +12,7 @@ function InputSort() {
     const FIELDSET_NAME = 'sort';
     const sortMethod = useSelector(selectSort);
     return (
-        <>
+        <div>
             <input
                 className={`${
                     sortMethod === SORT.BIRTHDAY ? styles.button_active : ''
@@ -23,7 +23,7 @@ function InputSort() {
                 onClick={() => setIsSelecting(true)}
             />
             {isSelecting && (
-                <aside
+                <div
                     className={styles.dialogue}
                     onClick={() => setIsSelecting(false)}
                 >
@@ -80,9 +80,9 @@ function InputSort() {
                             onClick={() => setIsSelecting(false)}
                         />
                     </div>
-                </aside>
+                </div>
             )}
-        </>
+        </div>
     );
 }
 

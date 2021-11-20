@@ -5,6 +5,7 @@
     display: flex;
     flex-wrap: nowrap;
     gap: 16px;
+    cursor: pointer;
 }
 
 $AVATAR_HEIGHT: 72px;
@@ -15,7 +16,7 @@ $AVATAR_HEIGHT: 72px;
 }
 
 .text {
-    width: 100%;
+    flex-basis: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -56,4 +57,92 @@ $AVATAR_HEIGHT: 72px;
     color: colors.$TEXT_SECONDARY;
     font-size: 0.9375;
     text-align: right;
+}
+
+$DETAILS_PADDING: 18px;
+$DETAILS_AVATAR_HEIGHT: 104px;
+.details {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: colors.$BG_PRIMARY;
+    &__main {
+        background-color: colors.$BG_SECONDARY;
+        padding: $DETAILS_PADDING;
+        padding-top: 72px;
+    }
+    &__info {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 24px;
+    }
+    &__avatar {
+        width: $DETAILS_AVATAR_HEIGHT;
+        height: $DETAILS_AVATAR_HEIGHT;
+        border-radius: math.div($DETAILS_AVATAR_HEIGHT, 2);
+    }
+    &__text {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+    &__names {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+    }
+    &__name {
+        font-weight: 700;
+        font-size: 1.5rem;
+        color: colors.$TEXT_PRIMARY;
+    }
+    &__tag {
+        text-transform: lowercase;
+        font-size: 1.0625rem;
+        color: colors.$TEXT_TETRIARY;
+    }
+    &__position {
+        font-size: 0.8125rem;
+        color: colors.$TEXT_SECONDARY;
+    }
+    &__back {
+        position: absolute;
+        left: $DETAILS_PADDING + math.div($DETAILS_PADDING * 2, 3);
+        top: $DETAILS_PADDING + math.div($DETAILS_PADDING * 2, 3);
+    }
+    &__contacts {
+        padding: $DETAILS_PADDING;
+        padding-top: 28px;
+        display: flex;
+        flex-direction: column;
+        gap: 48px;
+    }
+    &__birthday,
+    &__phone {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+    }
+    &__number {
+        font-weight: 500;
+        color: colors.$TEXT_PRIMARY;
+        flex-basis: 100%;
+    }
+    &__dates {
+        font-weight: 500;
+        flex-basis: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__date {
+        color: colors.$TEXT_PRIMARY;
+    }
+    &__age {
+        color: colors.$TEXT_TETRIARY;
+    }
 }
