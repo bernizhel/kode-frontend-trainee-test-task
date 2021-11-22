@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/kode-frontend-trainee-test-task/static/css/main.69f7fb31.chunk.css",
-    "main.js": "/kode-frontend-trainee-test-task/static/js/main.0491c11b.chunk.js",
-    "main.js.map": "/kode-frontend-trainee-test-task/static/js/main.0491c11b.chunk.js.map",
+    "main.css": "/kode-frontend-trainee-test-task/static/css/main.05d32d2a.chunk.css",
+    "main.js": "/kode-frontend-trainee-test-task/static/js/main.356c5ed3.chunk.js",
+    "main.js.map": "/kode-frontend-trainee-test-task/static/js/main.356c5ed3.chunk.js.map",
     "runtime-main.js": "/kode-frontend-trainee-test-task/static/js/runtime-main.45d26e04.js",
     "runtime-main.js.map": "/kode-frontend-trainee-test-task/static/js/runtime-main.45d26e04.js.map",
     "static/js/2.f0d36dd9.chunk.js": "/kode-frontend-trainee-test-task/static/js/2.f0d36dd9.chunk.js",
     "static/js/2.f0d36dd9.chunk.js.map": "/kode-frontend-trainee-test-task/static/js/2.f0d36dd9.chunk.js.map",
     "index.html": "/kode-frontend-trainee-test-task/index.html",
-    "static/css/main.69f7fb31.chunk.css.map": "/kode-frontend-trainee-test-task/static/css/main.69f7fb31.chunk.css.map",
+    "static/css/main.05d32d2a.chunk.css.map": "/kode-frontend-trainee-test-task/static/css/main.05d32d2a.chunk.css.map",
     "static/js/2.f0d36dd9.chunk.js.LICENSE.txt": "/kode-frontend-trainee-test-task/static/js/2.f0d36dd9.chunk.js.LICENSE.txt",
     "static/media/index.scss": "/kode-frontend-trainee-test-task/static/media/Inter-SemiBold.ff7b3ba2.woff",
     "static/media/avatar-placeholder.ac856b27.svg": "/kode-frontend-trainee-test-task/static/media/avatar-placeholder.ac856b27.svg",
@@ -22,7 +22,7 @@
   "entrypoints": [
     "static/js/runtime-main.45d26e04.js",
     "static/js/2.f0d36dd9.chunk.js",
-    "static/css/main.69f7fb31.chunk.css",
-    "static/js/main.0491c11b.chunk.js"
+    "static/css/main.05d32d2a.chunk.css",
+    "static/js/main.356c5ed3.chunk.js"
   ]
 }
