@@ -48,7 +48,7 @@ $AVATAR_HEIGHT: 72px;
     text-transform: lowercase;
 }
 
-.position {
+.department {
     color: colors.$TEXT_SECONDARY;
     font-size: 0.8125rem;
 }
@@ -106,7 +106,7 @@ $DETAILS_AVATAR_HEIGHT: 104px;
         font-size: 1.0625rem;
         color: colors.$TEXT_TETRIARY;
     }
-    &__position {
+    &__department {
         font-size: 0.8125rem;
         color: colors.$TEXT_SECONDARY;
     }

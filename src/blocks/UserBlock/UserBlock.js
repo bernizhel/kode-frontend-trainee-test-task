@@ -5,7 +5,7 @@ import starImage from './star.svg';
 import phoneImage from './phone.svg';
 import { useSelector } from 'react-redux';
 import { selectSort } from '@app/appSlice';
-import { SORT } from '@app/appVars';
+import { SORT, TAB } from '@app/appVars';
 import { useState } from 'react';
 
 function UserBlock({
@@ -13,12 +13,20 @@ function UserBlock({
     firstName,
     lastName,
     userTag,
-    position,
+    department,
     birthday,
     phone,
 }) {
     const [isDetailed, setIsDetailed] = useState(false);
     const sortMethod = useSelector(selectSort);
+    function formatDepartment(department) {
+        for (const entry of Object.values(TAB)) {
+            if (entry.code === department) {
+                return entry.name;
+            }
+        }
+        return TAB.ALL.name;
+    }
     function formatBirthday(birthday, type) {
         switch (type) {
             case 'summary':
@@ -81,7 +89,9 @@ function UserBlock({
                             </span>
                             <span className={styles.tag}>{userTag}</span>
                         </p>
-                        <p className={styles.position}>{position}</p>
+                        <p className={styles.department}>
+                            {formatDepartment(department)}
+                        </p>
                     </div>
                     {sortMethod === SORT.BIRTHDAY && (
                         <time className={styles.birthday} dateTime={birthday}>
@@ -111,8 +121,8 @@ function UserBlock({
                                         {userTag}
                                     </div>
                                 </div>
-                                <div className={styles.details__position}>
-                                    {position}
+                                <div className={styles.details__department}>
+                                    {formatDepartment(department)}
                                 </div>
                             </div>
                         </div>
