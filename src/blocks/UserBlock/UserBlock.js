@@ -166,9 +166,12 @@ function UserBlock({
                                 </div>
                                 <div className={styles.details__phone}>
                                     <img src={phoneImage} alt={'Phone'} />
-                                    <div className={styles.details__number}>
+                                    <a
+                                        className={styles.details__number}
+                                        href={`tel:${phone}`}
+                                    >
                                         {phone}
-                                    </div>
+                                    </a>
                                 </div>
                             </div>
                         </div>

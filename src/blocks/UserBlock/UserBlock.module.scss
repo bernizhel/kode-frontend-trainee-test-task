@@ -132,8 +132,10 @@ $DETAILS_AVATAR_HEIGHT: 104px;
         gap: 14px;
     }
     &__number {
+        display: block;
         font-weight: 500;
         color: colors.$TEXT_PRIMARY;
+        text-decoration: none;
         flex-basis: 100%;
     }
     &__dates {
