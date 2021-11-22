@@ -1,25 +1,28 @@
 {
   "files": {
-    "main.css": "/kode-frontend-trainee-test-task/static/css/main.03dabe94.chunk.css",
-    "main.js": "/kode-frontend-trainee-test-task/static/js/main.0f4f5802.chunk.js",
-    "main.js.map": "/kode-frontend-trainee-test-task/static/js/main.0f4f5802.chunk.js.map",
+    "main.css": "/kode-frontend-trainee-test-task/static/css/main.6097a191.chunk.css",
+    "main.js": "/kode-frontend-trainee-test-task/static/js/main.0bb59b4e.chunk.js",
+    "main.js.map": "/kode-frontend-trainee-test-task/static/js/main.0bb59b4e.chunk.js.map",
     "runtime-main.js": "/kode-frontend-trainee-test-task/static/js/runtime-main.45d26e04.js",
     "runtime-main.js.map": "/kode-frontend-trainee-test-task/static/js/runtime-main.45d26e04.js.map",
-    "static/js/2.d04cdc0a.chunk.js": "/kode-frontend-trainee-test-task/static/js/2.d04cdc0a.chunk.js",
-    "static/js/2.d04cdc0a.chunk.js.map": "/kode-frontend-trainee-test-task/static/js/2.d04cdc0a.chunk.js.map",
+    "static/js/2.0d6adbbc.chunk.js": "/kode-frontend-trainee-test-task/static/js/2.0d6adbbc.chunk.js",
+    "static/js/2.0d6adbbc.chunk.js.map": "/kode-frontend-trainee-test-task/static/js/2.0d6adbbc.chunk.js.map",
     "index.html": "/kode-frontend-trainee-test-task/index.html",
-    "static/css/main.03dabe94.chunk.css.map": "/kode-frontend-trainee-test-task/static/css/main.03dabe94.chunk.css.map",
-    "static/js/2.d04cdc0a.chunk.js.LICENSE.txt": "/kode-frontend-trainee-test-task/static/js/2.d04cdc0a.chunk.js.LICENSE.txt",
+    "static/css/main.6097a191.chunk.css.map": "/kode-frontend-trainee-test-task/static/css/main.6097a191.chunk.css.map",
+    "static/js/2.0d6adbbc.chunk.js.LICENSE.txt": "/kode-frontend-trainee-test-task/static/js/2.0d6adbbc.chunk.js.LICENSE.txt",
     "static/media/index.scss": "/kode-frontend-trainee-test-task/static/media/Inter-SemiBold.ff7b3ba2.woff",
     "static/media/avatar-placeholder.ac856b27.svg": "/kode-frontend-trainee-test-task/static/media/avatar-placeholder.ac856b27.svg",
+    "static/media/back.89324cb0.svg": "/kode-frontend-trainee-test-task/static/media/back.89324cb0.svg",
     "static/media/cross.abc0b3d8.svg": "/kode-frontend-trainee-test-task/static/media/cross.abc0b3d8.svg",
     "static/media/loop.f3a7d698.svg": "/kode-frontend-trainee-test-task/static/media/loop.f3a7d698.svg",
-    "static/media/sort.3431f404.svg": "/kode-frontend-trainee-test-task/static/media/sort.3431f404.svg"
+    "static/media/phone.aa86b18c.svg": "/kode-frontend-trainee-test-task/static/media/phone.aa86b18c.svg",
+    "static/media/sort.3431f404.svg": "/kode-frontend-trainee-test-task/static/media/sort.3431f404.svg",
+    "static/media/star.5d560b6e.svg": "/kode-frontend-trainee-test-task/static/media/star.5d560b6e.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.45d26e04.js",
-    "static/js/2.d04cdc0a.chunk.js",
-    "static/css/main.03dabe94.chunk.css",
-    "static/js/main.0f4f5802.chunk.js"
+    "static/js/2.0d6adbbc.chunk.js",
+    "static/css/main.6097a191.chunk.css",
+    "static/js/main.0bb59b4e.chunk.js"
   ]
 }
