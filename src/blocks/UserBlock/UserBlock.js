@@ -19,11 +19,42 @@ function UserBlock({
 }) {
     const [isDetailed, setIsDetailed] = useState(false);
     const sortMethod = useSelector(selectSort);
-    function formatBirthday(birthday) {
-        return new Intl.DateTimeFormat('ru-RU', {
-            day: 'numeric',
-            month: 'short',
-        }).format(new Date(birthday));
+    function formatBirthday(birthday, type) {
+        switch (type) {
+            case 'summary':
+                return new Intl.DateTimeFormat('ru-RU', {
+                    day: 'numeric',
+                    month: 'short',
+                }).format(new Date(birthday));
+            case 'detailed':
+                return new Intl.DateTimeFormat('ru-RU', {
+                    day: 'numeric',
+                    month: 'long',
+                    year: 'numeric',
+                }).format(new Date(birthday));
+            default:
+                return birthday;
+        }
+    }
+    function getAge(birthday) {
+        const age = String(
+            new Date(Date.now() - new Date(birthday).getTime()).getFullYear() -
+                1970,
+        );
+        if (age[age.length - 2] === '1') {
+            return `${age} лет`;
+        } else {
+            const year = age[age.length - 1] ?? '0';
+            if (year === '1') {
+                return `${age} год`;
+            } else if (['0', '5', '6', '7', '8', '9'].includes(year)) {
+                return `${age} лет`;
+            } else if (['2', '3', '4'].includes(year)) {
+                return `${age} года`;
+            } else {
+                return birthday;
+            }
+        }
     }
     return (
         <section>
@@ -51,7 +82,7 @@ function UserBlock({
                     </div>
                     {sortMethod === SORT.BIRTHDAY && (
                         <time className={styles.birthday} dateTime={birthday}>
-                            {formatBirthday(birthday)}
+                            {formatBirthday(birthday, 'summary')}
                         </time>
                     )}
                 </div>
@@ -95,13 +126,10 @@ function UserBlock({
                             <img src={starImage} alt={'Star'} />
                             <div className={styles.details__dates}>
                                 <div className={styles.details__date}>
-                                    {birthday}
+                                    {formatBirthday(birthday, 'detailed')}
                                 </div>
                                 <div className={styles.details__age}>
-                                    {new Date(
-                                        Date.now() -
-                                            new Date(birthday).getTime(),
-                                    ).getUTCFullYear() - 1970}
+                                    {getAge(birthday)}
                                 </div>
                             </div>
                         </div>
