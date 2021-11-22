@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/kode-frontend-trainee-test-task/static/css/main.6097a191.chunk.css",
-    "main.js": "/kode-frontend-trainee-test-task/static/js/main.0bb59b4e.chunk.js",
-    "main.js.map": "/kode-frontend-trainee-test-task/static/js/main.0bb59b4e.chunk.js.map",
+    "main.css": "/kode-frontend-trainee-test-task/static/css/main.69f7fb31.chunk.css",
+    "main.js": "/kode-frontend-trainee-test-task/static/js/main.b1f4b6d9.chunk.js",
+    "main.js.map": "/kode-frontend-trainee-test-task/static/js/main.b1f4b6d9.chunk.js.map",
     "runtime-main.js": "/kode-frontend-trainee-test-task/static/js/runtime-main.45d26e04.js",
     "runtime-main.js.map": "/kode-frontend-trainee-test-task/static/js/runtime-main.45d26e04.js.map",
-    "static/js/2.0d6adbbc.chunk.js": "/kode-frontend-trainee-test-task/static/js/2.0d6adbbc.chunk.js",
-    "static/js/2.0d6adbbc.chunk.js.map": "/kode-frontend-trainee-test-task/static/js/2.0d6adbbc.chunk.js.map",
+    "static/js/2.e2d264af.chunk.js": "/kode-frontend-trainee-test-task/static/js/2.e2d264af.chunk.js",
+    "static/js/2.e2d264af.chunk.js.map": "/kode-frontend-trainee-test-task/static/js/2.e2d264af.chunk.js.map",
     "index.html": "/kode-frontend-trainee-test-task/index.html",
-    "static/css/main.6097a191.chunk.css.map": "/kode-frontend-trainee-test-task/static/css/main.6097a191.chunk.css.map",
-    "static/js/2.0d6adbbc.chunk.js.LICENSE.txt": "/kode-frontend-trainee-test-task/static/js/2.0d6adbbc.chunk.js.LICENSE.txt",
+    "static/css/main.69f7fb31.chunk.css.map": "/kode-frontend-trainee-test-task/static/css/main.69f7fb31.chunk.css.map",
+    "static/js/2.e2d264af.chunk.js.LICENSE.txt": "/kode-frontend-trainee-test-task/static/js/2.e2d264af.chunk.js.LICENSE.txt",
     "static/media/index.scss": "/kode-frontend-trainee-test-task/static/media/Inter-SemiBold.ff7b3ba2.woff",
     "static/media/avatar-placeholder.ac856b27.svg": "/kode-frontend-trainee-test-task/static/media/avatar-placeholder.ac856b27.svg",
     "static/media/back.89324cb0.svg": "/kode-frontend-trainee-test-task/static/media/back.89324cb0.svg",
@@ -21,8 +21,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.45d26e04.js",
-    "static/js/2.0d6adbbc.chunk.js",
-    "static/css/main.6097a191.chunk.css",
-    "static/js/main.0bb59b4e.chunk.js"
+    "static/js/2.e2d264af.chunk.js",
+    "static/css/main.69f7fb31.chunk.css",
+    "static/js/main.b1f4b6d9.chunk.js"
   ]
 }
