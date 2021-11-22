@@ -6,7 +6,8 @@ import phoneImage from './phone.svg';
 import { useSelector } from 'react-redux';
 import { selectSort } from '@app/appSlice';
 import { SORT, TAB } from '@app/appVars';
-import { Routes, Route, Link } from 'react-router-dom';
+import { Routes, Route, Link, useLocation } from 'react-router-dom';
+import { useEffect } from 'react';
 
 function UserBlock({
     id,
@@ -64,15 +65,17 @@ function UserBlock({
             }
         }
     }
+    const location = useLocation();
+    useEffect(() => {
+        if (location.pathname !== '/') {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = 'visible';
+        }
+    }, [location]);
     return (
         <section>
-            <Link
-                className={styles.UserBlock}
-                to={`${id}`}
-                onClick={() => {
-                    document.body.style.overflow = 'hidden';
-                }}
-            >
+            <Link className={styles.UserBlock} to={`${id}`}>
                 <img
                     className={styles.avatar}
                     src={avatarUrl}
@@ -138,14 +141,7 @@ function UserBlock({
                                         </div>
                                     </div>
                                 </div>
-                                <Link
-                                    className={styles.details__back}
-                                    to={'/'}
-                                    onClick={() => {
-                                        document.body.style.overflow =
-                                            'visible';
-                                    }}
-                                >
+                                <Link className={styles.details__back} to={'/'}>
                                     <input
                                         type={'image'}
                                         src={backButton}
