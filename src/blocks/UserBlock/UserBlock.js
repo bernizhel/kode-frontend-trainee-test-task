@@ -6,9 +6,10 @@ import phoneImage from './phone.svg';
 import { useSelector } from 'react-redux';
 import { selectSort } from '@app/appSlice';
 import { SORT, TAB } from '@app/appVars';
-import { useState } from 'react';
+import { Routes, Route, Link } from 'react-router-dom';
 
 function UserBlock({
+    id,
     avatarUrl,
     firstName,
     lastName,
@@ -17,7 +18,6 @@ function UserBlock({
     birthday,
     phone,
 }) {
-    const [isDetailed, setIsDetailed] = useState(false);
     const sortMethod = useSelector(selectSort);
     function formatDepartment(department) {
         for (const entry of Object.values(TAB)) {
@@ -66,10 +66,10 @@ function UserBlock({
     }
     return (
         <section>
-            <div
+            <Link
                 className={styles.UserBlock}
+                to={`${id}`}
                 onClick={() => {
-                    setIsDetailed(true);
                     document.body.style.overflow = 'hidden';
                 }}
             >
@@ -99,65 +99,86 @@ function UserBlock({
                         </time>
                     )}
                 </div>
-            </div>
-            {isDetailed && (
-                <div className={styles.details}>
-                    <div className={styles.details__main}>
-                        <div className={styles.details__info}>
-                            <img
-                                className={styles.details__avatar}
-                                src={avatarUrl}
-                                onError={(event) => {
-                                    event.target.src = avatarPlaceholder;
-                                }}
-                                alt={'User Avatar'}
-                            />
-                            <div className={styles.details__text}>
-                                <div className={styles.details__names}>
-                                    <div className={styles.details__name}>
-                                        {firstName} {lastName}
+            </Link>
+            <Routes>
+                <Route
+                    path={`${id}`}
+                    element={
+                        <div className={styles.details}>
+                            <div className={styles.details__main}>
+                                <div className={styles.details__info}>
+                                    <img
+                                        className={styles.details__avatar}
+                                        src={avatarUrl}
+                                        onError={(event) => {
+                                            event.target.src =
+                                                avatarPlaceholder;
+                                        }}
+                                        alt={'User Avatar'}
+                                    />
+                                    <div className={styles.details__text}>
+                                        <div className={styles.details__names}>
+                                            <div
+                                                className={styles.details__name}
+                                            >
+                                                {firstName} {lastName}
+                                            </div>
+                                            <div
+                                                className={styles.details__tag}
+                                            >
+                                                {userTag}
+                                            </div>
+                                        </div>
+                                        <div
+                                            className={
+                                                styles.details__department
+                                            }
+                                        >
+                                            {formatDepartment(department)}
+                                        </div>
                                     </div>
-                                    <div className={styles.details__tag}>
-                                        {userTag}
+                                </div>
+                                <Link
+                                    className={styles.details__back}
+                                    to={'/'}
+                                    onClick={() => {
+                                        document.body.style.overflow =
+                                            'visible';
+                                    }}
+                                >
+                                    <input
+                                        type={'image'}
+                                        src={backButton}
+                                        alt={'Back'}
+                                    />
+                                </Link>
+                            </div>
+                            <div className={styles.details__contacts}>
+                                <div className={styles.details__birthday}>
+                                    <img src={starImage} alt={'Star'} />
+                                    <div className={styles.details__dates}>
+                                        <div className={styles.details__date}>
+                                            {formatBirthday(
+                                                birthday,
+                                                'detailed',
+                                            )}
+                                        </div>
+                                        <div className={styles.details__age}>
+                                            {getAge(birthday)}
+                                        </div>
                                     </div>
                                 </div>
-                                <div className={styles.details__department}>
-                                    {formatDepartment(department)}
+                                <div className={styles.details__phone}>
+                                    <img src={phoneImage} alt={'Phone'} />
+                                    <div className={styles.details__number}>
+                                        {phone}
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <input
-                            className={styles.details__back}
-                            type={'image'}
-                            src={backButton}
-                            alt={'Back'}
-                            onClick={() => {
-                                setIsDetailed(false);
-                                document.body.style.overflow = 'visible';
-                            }}
-                        />
-                    </div>
-                    <div className={styles.details__contacts}>
-                        <div className={styles.details__birthday}>
-                            <img src={starImage} alt={'Star'} />
-                            <div className={styles.details__dates}>
-                                <div className={styles.details__date}>
-                                    {formatBirthday(birthday, 'detailed')}
-                                </div>
-                                <div className={styles.details__age}>
-                                    {getAge(birthday)}
-                                </div>
-                            </div>
-                        </div>
-                        <div className={styles.details__phone}>
-                            <img src={phoneImage} alt={'Phone'} />
-                            <div className={styles.details__number}>
-                                {phone}
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            )}
+                    }
+                ></Route>
+            </Routes>
         </section>
     );
 }

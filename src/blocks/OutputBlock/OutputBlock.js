@@ -115,6 +115,7 @@ function OutputBlock() {
                                     </div>
                                 )}
                             <UserBlock
+                                id={user.id}
                                 avatarUrl={user.avatarUrl}
                                 firstName={user.firstName}
                                 lastName={user.lastName}
