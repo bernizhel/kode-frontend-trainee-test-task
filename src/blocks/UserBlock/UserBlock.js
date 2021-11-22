@@ -60,7 +60,10 @@ function UserBlock({
         <section>
             <div
                 className={styles.UserBlock}
-                onClick={() => setIsDetailed(true)}
+                onClick={() => {
+                    setIsDetailed(true);
+                    document.body.style.overflow = 'hidden';
+                }}
             >
                 <img
                     className={styles.avatar}
@@ -118,7 +121,10 @@ function UserBlock({
                             type={'image'}
                             src={backButton}
                             alt={'Back'}
-                            onClick={() => setIsDetailed(false)}
+                            onClick={() => {
+                                setIsDetailed(false);
+                                document.body.style.overflow = 'visible';
+                            }}
                         />
                     </div>
                     <div className={styles.details__contacts}>

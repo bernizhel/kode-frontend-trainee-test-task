@@ -11,6 +11,11 @@ function InputSort() {
     const [isSelecting, setIsSelecting] = useState(false);
     const FIELDSET_NAME = 'sort';
     const sortMethod = useSelector(selectSort);
+    function selectOption(payload) {
+        dispatch(setSort(payload));
+        setIsSelecting(false);
+        document.body.style.overflow = 'visible';
+    }
     return (
         <div>
             <input
@@ -20,12 +25,18 @@ function InputSort() {
                 type={'image'}
                 src={sort}
                 alt={'Sort!'}
-                onClick={() => setIsSelecting(true)}
+                onClick={() => {
+                    setIsSelecting(true);
+                    document.body.style.overflow = 'hidden';
+                }}
             />
             {isSelecting && (
                 <div
                     className={styles.dialogue}
-                    onClick={() => setIsSelecting(false)}
+                    onClick={() => {
+                        setIsSelecting(false);
+                        document.body.style.overflow = 'visible';
+                    }}
                 >
                     <div
                         className={styles.dialogue__container}
@@ -45,10 +56,7 @@ function InputSort() {
                                     : ''
                             }`}
                             htmlFor={SORT.ALPHABET}
-                            onClick={() => {
-                                dispatch(setSort(SORT.ALPHABET));
-                                setIsSelecting(false);
-                            }}
+                            onClick={() => selectOption(SORT.ALPHABET)}
                         >
                             По алфавиту
                         </label>
@@ -65,10 +73,7 @@ function InputSort() {
                                     : ''
                             }`}
                             htmlFor={SORT.BIRTHDAY}
-                            onClick={() => {
-                                dispatch(setSort(SORT.BIRTHDAY));
-                                setIsSelecting(false);
-                            }}
+                            onClick={() => selectOption(SORT.BIRTHDAY)}
                         >
                             По дню рождения
                         </label>
@@ -77,7 +82,10 @@ function InputSort() {
                             type={'image'}
                             src={cross}
                             alt={'Close'}
-                            onClick={() => setIsSelecting(false)}
+                            onClick={() => {
+                                setIsSelecting(false);
+                                document.body.style.overflow = 'visible';
+                            }}
                         />
                     </div>
                 </div>
