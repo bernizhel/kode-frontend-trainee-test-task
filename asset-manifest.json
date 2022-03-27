@@ -1,28 +1,32 @@
 {
   "files": {
-    "main.css": "/kode-frontend-trainee-test-task/static/css/main.05d32d2a.chunk.css",
-    "main.js": "/kode-frontend-trainee-test-task/static/js/main.356c5ed3.chunk.js",
-    "main.js.map": "/kode-frontend-trainee-test-task/static/js/main.356c5ed3.chunk.js.map",
-    "runtime-main.js": "/kode-frontend-trainee-test-task/static/js/runtime-main.45d26e04.js",
-    "runtime-main.js.map": "/kode-frontend-trainee-test-task/static/js/runtime-main.45d26e04.js.map",
-    "static/js/2.f0d36dd9.chunk.js": "/kode-frontend-trainee-test-task/static/js/2.f0d36dd9.chunk.js",
-    "static/js/2.f0d36dd9.chunk.js.map": "/kode-frontend-trainee-test-task/static/js/2.f0d36dd9.chunk.js.map",
+    "main.css": "/kode-frontend-trainee-test-task/static/css/main.f8fb0028.css",
+    "main.js": "/kode-frontend-trainee-test-task/static/js/main.77af2bb8.js",
+    "static/media/Inter-SemiBold.otf": "/kode-frontend-trainee-test-task/static/media/Inter-SemiBold.0d057be4c755c72203d5.otf",
+    "static/media/Inter-Bold.otf": "/kode-frontend-trainee-test-task/static/media/Inter-Bold.bdfbc26dda56c19a3d2f.otf",
+    "static/media/Inter-Medium.otf": "/kode-frontend-trainee-test-task/static/media/Inter-Medium.d4189f5311ca4aa751c0.otf",
+    "static/media/Inter-Regular.otf": "/kode-frontend-trainee-test-task/static/media/Inter-Regular.5499752a10efb62b2244.otf",
+    "static/media/Inter-Bold.ttf": "/kode-frontend-trainee-test-task/static/media/Inter-Bold.a73db89c43e44ca8f5e0.ttf",
+    "static/media/Inter-SemiBold.ttf": "/kode-frontend-trainee-test-task/static/media/Inter-SemiBold.45b4c2ae493bb481102f.ttf",
+    "static/media/Inter-Medium.ttf": "/kode-frontend-trainee-test-task/static/media/Inter-Medium.e7231ba33760832432b8.ttf",
+    "static/media/Inter-SemiBold.woff": "/kode-frontend-trainee-test-task/static/media/Inter-SemiBold.ff7b3ba2d3ba3bb69b9e.woff",
+    "static/media/Inter-Regular.ttf": "/kode-frontend-trainee-test-task/static/media/Inter-Regular.2391725004ae05a27e8e.ttf",
+    "static/media/Inter-Bold.woff": "/kode-frontend-trainee-test-task/static/media/Inter-Bold.68b20c152fce6870e708.woff",
+    "static/media/Inter-Medium.woff": "/kode-frontend-trainee-test-task/static/media/Inter-Medium.36bc89d902ca9518a6c2.woff",
+    "static/media/Inter-Regular.woff": "/kode-frontend-trainee-test-task/static/media/Inter-Regular.935755f1dd48004a4aa7.woff",
+    "static/media/avatar-placeholder.svg": "/kode-frontend-trainee-test-task/static/media/avatar-placeholder.ac856b27879d49b947b6f3bd1a1a29d1.svg",
+    "static/media/phone.svg": "/kode-frontend-trainee-test-task/static/media/phone.aa86b18c1032a209a3ffd7d3e2b13d3c.svg",
+    "static/media/sort.svg": "/kode-frontend-trainee-test-task/static/media/sort.3431f40425209cc9c06002ca7736cad7.svg",
+    "static/media/star.svg": "/kode-frontend-trainee-test-task/static/media/star.5d560b6e0a179752b0c084d602fa6059.svg",
+    "static/media/loop.svg": "/kode-frontend-trainee-test-task/static/media/loop.f3a7d698a1e97aff68e2df35115066f4.svg",
+    "static/media/back.svg": "/kode-frontend-trainee-test-task/static/media/back.89324cb0841ae74c642ef2e4931d22d3.svg",
     "index.html": "/kode-frontend-trainee-test-task/index.html",
-    "static/css/main.05d32d2a.chunk.css.map": "/kode-frontend-trainee-test-task/static/css/main.05d32d2a.chunk.css.map",
-    "static/js/2.f0d36dd9.chunk.js.LICENSE.txt": "/kode-frontend-trainee-test-task/static/js/2.f0d36dd9.chunk.js.LICENSE.txt",
-    "static/media/index.scss": "/kode-frontend-trainee-test-task/static/media/Inter-SemiBold.ff7b3ba2.woff",
-    "static/media/avatar-placeholder.ac856b27.svg": "/kode-frontend-trainee-test-task/static/media/avatar-placeholder.ac856b27.svg",
-    "static/media/back.89324cb0.svg": "/kode-frontend-trainee-test-task/static/media/back.89324cb0.svg",
-    "static/media/cross.abc0b3d8.svg": "/kode-frontend-trainee-test-task/static/media/cross.abc0b3d8.svg",
-    "static/media/loop.f3a7d698.svg": "/kode-frontend-trainee-test-task/static/media/loop.f3a7d698.svg",
-    "static/media/phone.aa86b18c.svg": "/kode-frontend-trainee-test-task/static/media/phone.aa86b18c.svg",
-    "static/media/sort.3431f404.svg": "/kode-frontend-trainee-test-task/static/media/sort.3431f404.svg",
-    "static/media/star.5d560b6e.svg": "/kode-frontend-trainee-test-task/static/media/star.5d560b6e.svg"
+    "static/media/cross.svg": "/kode-frontend-trainee-test-task/static/media/cross.abc0b3d8f7dd574842bbe03f95918e9f.svg",
+    "main.f8fb0028.css.map": "/kode-frontend-trainee-test-task/static/css/main.f8fb0028.css.map",
+    "main.77af2bb8.js.map": "/kode-frontend-trainee-test-task/static/js/main.77af2bb8.js.map"
   },
   "entrypoints": [
-    "static/js/runtime-main.45d26e04.js",
-    "static/js/2.f0d36dd9.chunk.js",
-    "static/css/main.05d32d2a.chunk.css",
-    "static/js/main.356c5ed3.chunk.js"
+    "static/css/main.f8fb0028.css",
+    "static/js/main.77af2bb8.js"
   ]
 }
