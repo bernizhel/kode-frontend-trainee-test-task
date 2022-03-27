@@ -2,18 +2,6 @@
     "name": "kode-frontend-trainee-test-task",
     "version": "1.0.0",
     "private": true,
-    "dependencies": {
-        "@craco/craco": "^6.4.0",
-        "@reduxjs/toolkit": "^1.6.2",
-        "axios": "^0.24.0",
-        "gh-pages": "^3.2.3",
-        "react": "^17.0.2",
-        "react-dom": "^17.0.2",
-        "react-redux": "^7.2.6",
-        "react-router-dom": "^6.0.2",
-        "react-scripts": "4.0.3",
-        "sass": "^1.43.4"
-    },
     "scripts": {
         "start": "craco start",
         "build": "craco build",
@@ -34,5 +22,17 @@
             "last 1 safari version"
         ]
     },
-    "homepage": "https://bernizhel.github.io/kode-frontend-trainee-test-task/"
+    "homepage": "https://bernizhel.github.io/kode-frontend-trainee-test-task/",
+    "dependencies": {
+        "@craco/craco": "^6.4.3",
+        "@reduxjs/toolkit": "^1.8.0",
+        "axios": "^0.26.1",
+        "gh-pages": "^3.2.3",
+        "react": "^17.0.2",
+        "react-dom": "^17.0.2",
+        "react-redux": "^7.2.6",
+        "react-router-dom": "^6.2.2",
+        "react-scripts": "^5.0.0",
+        "sass": "^1.49.9"
+    }
 }
